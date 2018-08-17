@@ -6,7 +6,7 @@ One stop solution to cease fraud and black marketing of the donated organs using
 * Tracking the organ is possible.
 * No black marketing of the organs to the rich.
 
-# Steps to run Fabric Care
+# Steps to run D.O.T
 ## 1. Run shell scripts from fabric tools
 ### 1. Run Fabric netwok
 ```
