@@ -3,7 +3,8 @@
   "version": "0.0.7",
   "description": "Incremental creation of the ACME model",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "start": "node server.js"
   },
   "author": "FlipFlips",
   "email": "flipflop@acloudfan.com",
@@ -24,7 +25,20 @@
     "composer-common": "^0.20.0",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
+    "hbs": "^4.0.1",
     "passport": "^0.4.0",
     "passport-github": "^1.1.0"
-  }
+  },
+  "main": "admin-connection.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rikki407/D-LoC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rikki407/D-LoC/issues"
+  },
+  "homepage": "https://github.com/Rikki407/D-LoC#readme"
 }
