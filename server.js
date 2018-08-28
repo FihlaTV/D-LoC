@@ -23,6 +23,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
+    console.log('here');
     res.redirect('/home');
 });
 
@@ -30,8 +31,13 @@ app.get('/home', (req, res) => {
     res.render('index.html');
 });
 
-app.post('/home', (req, res) => {
-    res.redirect('/home');
+app.post('/shipment', (req, res) => {
+    console.log(req.body);
+    res.redirect('/');
+});
+app.post('/transaction', (req, res) => {
+    console.log(req.body);
+    res.redirect('/');
 });
 
 app.listen(port, () => console.log(`Server is up on port ${port}`));
