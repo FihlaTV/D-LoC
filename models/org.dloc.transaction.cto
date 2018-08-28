@@ -1,0 +1,32 @@
+namespace org.dloc.transaction
+
+//details related to shipment 
+asset Shipment identified by shipmentId {
+  o		String		shipmentId
+  o		String 		location	
+  o		String 		contactName	
+  o		String 		contactSubject	
+  o		String 		description	
+  o		String 		date
+  o		String 		time
+  o		String 		volume
+  o		String 		contactMessage
+}
+
+// transaction for shippment
+transaction beginShipment {
+  o		String		shipmentId
+  o		String 		location	
+  o		String 		contactName	
+  o		String 		contactSubject	
+  o		String 		description	
+  o		String 		date
+  o		String 		time
+  o		String 		volume
+  o		String 		contactMessage	
+}
+
+// Confirmation for donor with oragn id
+event shipmentRecorded {
+  o   String      shipmentId
+}

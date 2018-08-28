@@ -1,8 +1,6 @@
 var express     =    require('express');
 var bodyParser  =    require('body-parser');
 var app         =    express();
-var passport    =    require('passport');
-var GitHubStrategy = require('passport-github').Strategy;
 
 
 var OrganList = {

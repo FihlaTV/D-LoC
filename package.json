@@ -1,20 +1,19 @@
 {
-  "name": "flipflop",
-  "version": "0.0.7",
+  "name": "dloc",
+  "version": "0.0.2",
   "description": "Incremental creation of the ACME model",
   "scripts": {
     "test": "mocha --recursive",
     "start": "node server.js"
   },
-  "author": "FlipFlips",
-  "email": "flipflop@acloudfan.com",
+  "author": "Rikki407",
+  "email": "rishablamba407@gmail.com",
   "license": "Apache-2.0",
   "devDependencies": {
-    "composer-admin": "latest",
-    "composer-client": "latest",
-    "composer-connector-embedded": "latest",
     "browserfs": "latest",
     "chai": "latest",
+    "composer-admin": "latest",
+    "composer-connector-embedded": "latest",
     "eslint": "latest",
     "istanbul": "latest",
     "mkdirp": "latest",
@@ -22,6 +21,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "composer-client": "^0.20.0",
     "composer-common": "^0.20.0",
     "ejs": "^2.5.8",
     "express": "^4.16.3",

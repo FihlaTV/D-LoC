@@ -1,4 +1,4 @@
-# D.O.T (Decentralized Organ Tracking)
+# D-LoC
 One stop solution to cease fraud and black marketing of the donated organs using hyperledger fabric
 * Organ waiting list made transparent to cease jumping and manipulations.
 * Organ availability list made transparent and updated by the hospitals.
