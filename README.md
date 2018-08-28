@@ -6,43 +6,6 @@ One stop solution to cease fraud and black marketing of the donated organs using
 * Tracking the organ is possible.
 * No black marketing of the organs to the rich.
 
-# Steps to run D.O.T
-## 1. Run shell scripts from fabric tools
-### 1. Run Fabric netwok
-```
-cd fabric-tools
-./startFabric.sh
-```
-### 2. create a PeerAdminCard
-```
-./createPeerAdminCard.sh
-```
-## 2. Install node packages
-```
-npm install
-```
-## 3. Create the BNA archive
-```
-composer archive create  --sourceType dir --sourceName ../
-```
-## 4. Install a network using archive file
-```
-composer network install -a ./flipflop@0.0.7.bna -c PeerAdmin@hlfv1
-```
-
-## 5. Start a network 
-```
-composer network start -c PeerAdmin@hlfv1 -n flipflop -V 0.0.7 -A admin -S adminpw
-```
-
-## 6. Import the card generated in above step
-```
-composer card import -f admin@flipflop.card
-```
-## 7. Final step
-```
-node app.js
-```
 
 # Steps To setup or Integrate Hyperledger Fabric
 ## 1. Install the CLI tools
@@ -90,4 +53,46 @@ yo hyperledger-composer:businessnetwork
 * Python 2.7
 * Nodejs and npm with node version 8.11.1
 * Docker Engine: Version 17.03 or higher
+
+
+
+# Steps to run D.O.T
+## 1. Run shell scripts from fabric tools
+### 1. Run Fabric netwok
+```
+cd fabric-tools
+./startFabric.sh
+```
+### 2. create a PeerAdminCard
+```
+./createPeerAdminCard.sh
+```
+## 2. Install node packages
+```
+npm install
+```
+## 3. Create the BNA archive
+```
+composer archive create  --sourceType dir --sourceName ../
+```
+## 4. Install a network using archive file
+```
+composer network install -a ./flipflop@0.0.7.bna -c PeerAdmin@hlfv1
+```
+
+## 5. Start a network 
+```
+composer network start -c PeerAdmin@hlfv1 -n flipflop -V 0.0.7 -A admin -S adminpw
+```
+
+## 6. Import the card generated in above step
+```
+composer card import -f admin@flipflop.card
+```
+## 7. Final step
+```
+node app.js
+```
+
+
 
