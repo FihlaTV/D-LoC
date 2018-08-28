@@ -30,7 +30,10 @@ app.get('/home', (req, res) => {
     res.render('index.html');
 });
 
-app.post('/home', (req, res) => {
+app.post('/shipment', (req, res) => {
+    res.redirect('/home');
+});
+app.post('/transaction', (req, res) => {
     res.redirect('/home');
 });
 
