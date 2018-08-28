@@ -102,7 +102,7 @@
                 <div class="col-full text-center">
                     <h3>Logs</h3>
                     <table class="table">
-                        <thead class="thead-dark">
+                        <thead class="">
                             <tr>
                                 <th scope="col">Shipment ID</th>
                                 <th scope="col">Event Description</th>
@@ -136,34 +136,43 @@
 
             <div class="row about-content">
                 <div class="col-six tab-full left">
-                    <form method="post" id="myForm" name="form_name" style="height:100%; text-size-adjust: 25rem;">
-                        <div class="form-group">
-                            <input type="id" class="form-control" name="shipmentId" id="exampleFormControlInput1" placeholder="Shipment Id" required>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" name="location" id="exampleFormControlSelect1" aria-placeholder="Location" required>
-                                <option>Origin</option>
-                                <option>Destination</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required>
-                                <option>NOR Tendered</option>
-                                <option>Vessel Sailed</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <input data-date-format="dd/mm/yyyy" name="date" id="datepicker" placeholder="Date" required>
+                    <form name="contactForm" id="contactForm" method="post" action="">
+                        <fieldset>
+                            <div class="form-field">
+                                <input name="contactName" type="text" id="contactName" placeholder="Shipment ID" value="" minlength="2" required="" aria-required="true"
+                                    class="full-width">
                             </div>
-                            <div class="col">
-                                <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
+                            <div class="form-field">
+                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Loaction" value="" required="" aria-required="true" class="full-width">
                             </div>
-                            <div class="col">
-                                <input type="id" class="form-control" name="volumerecorded" id="volume" placeholder="Volume" required>
+                            <div class="form-field">
+                                <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
                             </div>
-                        </div>
+                            <div class="form-field">
+                                <select class="form-control" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required>
+                                    <option>NOR Tendered</option>
+                                    <option>Vessel Sailed</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-field">
+                                <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true"
+                                    class="full-width"></textarea>
+                            </div>
+                            <div class="form-field">
+                                <button class="full-width btn--primary">Submit</button>
+                                <div class="submit-loader">
+                                    <div class="text-loader">Sending...</div>
+                                    <div class="s-loader">
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                     </form>
+
                 </div>
 
                 <div class="col-six tab-full right">
@@ -188,8 +197,8 @@
 
             <div class="row narrow section-intro has-bottom-sep">
                 <div class="col-full">
-                    <h3>Journal</h3>
-                    <h1>Latest From The Blog.</h1>
+                    <h3>Shipments</h3>
+                    <h1>Latest Shipments.</h1>
                     <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute. Excepteur amet commodo ea dolore irure
                         esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum
                         non est in officia.</p>
@@ -335,10 +344,6 @@
         </div> <!-- end s-testimonials -->
 
 
-        <!-- blog
-    ================================================== -->
-
-
         <!-- s-stats
     ================================================== -->
         <section id="stats" class="s-stats">
@@ -379,9 +384,7 @@
         <!-- s-stats
     ================================================== -->
         <section id="contact" class="s-contact target-section">
-
             <div class="overlay"></div>
-
             <div class="row narrow section-intro">
                 <div class="col-full">
                     <h3>Contact</h3>
@@ -391,12 +394,10 @@
                         non est in officia.</p>
                 </div>
             </div>
-
             <div class="row contact__main">
                 <div class="col-eight tab-full contact__form">
                     <form name="contactForm" id="contactForm" method="post" action="">
                         <fieldset>
-
                             <div class="form-field">
                                 <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true"
                                     class="full-width">
@@ -422,7 +423,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </fieldset>
                     </form>
 
@@ -489,7 +489,6 @@
                         <div class="pswp__caption__center"></div>
                     </div>
                 </div>
-
             </div>
 
         </div><!-- end photoSwipe background -->
