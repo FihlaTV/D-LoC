@@ -20,6 +20,8 @@
 
         <!-- CSS
     ================================================== -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous">
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/vendor.css">
         <link rel="stylesheet" href="css/main.css">
@@ -44,17 +46,14 @@
         <!-- header
     ================================================== -->
         <header class="s-header">
-
-            <div class="header-logo">
-                <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+            <div class="header-logo" style="padding-bottom: 3.5rem;">
+                <h1 style="color: white">D-LOC</h1>
             </div>
-
             <nav class="header-nav-wrap">
                 <ul class="header-nav">
                     <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
-                    <li><a class="smoothscroll" href="#blog" title="blog">Blog</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">Logs</a></li>
+                    <li><a class="smoothscroll" href="#blog" title="blog">Shipments</a></li>
                     <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
                 </ul>
             </nav>
@@ -62,8 +61,6 @@
             <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
 
         </header> <!-- end s-header -->
-
-
         <!-- home
    ================================================== -->
         <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/bg1.jpg" data-natural-width=3000
@@ -71,105 +68,106 @@
 
             <div class="overlay" id="particles-js"></div>
             <div class="shadow-overlay"></div>
-
             <div class="home-content">
-
                 <div class="row home-content__main">
-
                     <h3>Hello There</h3>
-
                     <h1>
-                        D-LOC <br> TRACKS YOUR SHIPMENTS &<br>AIDS IN MONEY TRANSFER.
+                        D-LOC <br>SOLUTION FOR YOUR<br>SHIPMENT AND MONEY AIDS.
                     </h1>
-
                     <div class="home-content__buttons">
                         <a href="#works" class="smoothscroll btn btn--stroke">
-                           Transfer Money
+                            Transfer Money
                         </a>
                         <a href="#about" class="smoothscroll btn btn--stroke">
-                            Latest Shipments
+                            Add Shipments
                         </a>
                     </div>
-
                     <div class="home-content__scroll">
                         <a href="#about" class="scroll-link smoothscroll">
                             <span>Scroll Down</span>
                         </a>
                     </div>
-
                 </div>
-
             </div> <!-- end home-content -->
-
             <ul class="home-social">
             </ul>
             <!-- end home-social -->
-
         </section> <!-- end s-home -->
 
 
         <!-- about
-    ================================================== -->
+    ================================================== Latest ShipmentsLatest Shipments-->
         <section id="about" class="s-about target-section">
-
             <div class="row narrow section-intro has-bottom-sep">
                 <div class="col-full text-center">
-                    <h3>About</h3>
-                    <h1>More About Me</h1>
-                    <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure
-                        esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum
-                        non est in officia.</p>
+                    <h3>Logs</h3>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Shipment ID</th>
+                                <th scope="col">Event Description</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Start Date</th>
+                                <th scope="col">Start Time</th>
+                                <th scope="col">Volume Recorded</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>NOR tendered</td>
+                                <td>Origin</td>
+                                <td>12/02/1998</td>
+                                <td>15:12</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">{{this.shipmentId}}</td>
+                                <td>{{this.description}}</td>
+                                <td>{{this.location}}</td>
+                                <td>{{this.date}}</td>
+                                <td>{{this.time}}</td>
+                                <td>{{this.volumerecorded}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div class="row about-content">
-
                 <div class="col-six tab-full left">
-                    <h3>Howdy!</h3>
-
-                    <p>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit
-                        laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</p>
-
-                    <p>
-                        Lorem ipsum Nisi officia Duis irure voluptate dolor commodo pariatur occaecat aliquip adipisicing voluptate Ut in qui ea
-                        sint occaecat in commodo in in in incididunt ut sunt in Ut Duis in ut ex qui anim cupidatat cupidatat
-                        ex in non dolore labore ea amet cillum ea qui dolor nisi sed velit mollit exercitation ex fugiat
-                        labore in deserunt culpa laborum culpa anim dolore laboris amet irure mollit proident velit fugiat
-                        aute ea elit magna consequat qui officia quis elit Duis dolor esse cupidatat tempor proident voluptate
-                        aliqua ex cupidatat do eiusmod veniam irure laborum ut magna nostrud dolore ullamco commodo elit
-                        sit magna aliqua laborum veniam officia dolor.
-                    </p>
+                    <form method="post" id="myForm" name="form_name" style="height:100%; text-size-adjust: 25rem;">
+                        <div class="form-group">
+                            <input type="id" class="form-control" name="shipmentId" id="exampleFormControlInput1" placeholder="Shipment Id" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="location" id="exampleFormControlSelect1" aria-placeholder="Location" required>
+                                <option>Origin</option>
+                                <option>Destination</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required>
+                                <option>NOR Tendered</option>
+                                <option>Vessel Sailed</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input data-date-format="dd/mm/yyyy" name="date" id="datepicker" placeholder="Date" required>
+                            </div>
+                            <div class="col">
+                                <input type="time" class="form-control" name="time" id="time" placeholder="Time" required>
+                            </div>
+                            <div class="col">
+                                <input type="id" class="form-control" name="volumerecorded" id="volume" placeholder="Volume" required>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="col-six tab-full right">
-                    <h3>I've Got Some skills.</h3>
-
-                    <ul class="skill-bars">
-                        <li>
-                            <div class="progress percent90"><span>90%</span></div>
-                            <strong>HTML5</strong>
-                        </li>
-                        <li>
-                            <div class="progress percent85"><span>85%</span></div>
-                            <strong>CSS3</strong>
-                        </li>
-                        <li>
-                            <div class="progress percent70"><span>70%</span></div>
-                            <strong>JQuery</strong>
-                        </li>
-                        <li>
-                            <div class="progress percent95"><span>95%</span></div>
-                            <strong>PHP</strong>
-                        </li>
-                        <li>
-                            <div class="progress percent75"><span>75%</span></div>
-                            <strong>Wordpress</strong>
-                        </li>
-                        <li>
-                            <div class="progress percent90"><span>90%</span></div>
-                            <strong>Angular JS</strong>
-                        </li>
-                    </ul>
+                    <h3>Logs</h3>
                 </div>
 
             </div> <!-- end about-content -->
@@ -177,430 +175,15 @@
             <div class="row about-content about-content--buttons">
 
                 <div class="col-six tab-full left">
-                    <a href="#0" class="btn btn--primary full-width">Download My CV</a>
+                    <a href="#0" class="btn btn--primary full-width" data-target="#myForm">Submit</a>
                 </div>
                 <div class="col-six tab-full right">
                     <a href="#0" class="btn full-width">Hire Me Now</a>
                 </div>
 
             </div> <!-- end about-content buttons -->
-
-            <div class="row about-content about-content--timeline">
-
-                <div class="col-full text-center">
-                    <h3>My Work Experience.</h3>
-                </div>
-
-                <div class="col-six tab-full left">
-                    <div class="timeline">
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2015 - Present</p>
-                                <h3>Awesome Studio</h3>
-                                <h5>Lead Designer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat
-                                    laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla
-                                    esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-                            </div>
-                        </div> <!-- end timeline__block -->
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2014 - June 2015</p>
-                                <h3>Super Cool Agency</h3>
-                                <h5>Front-end Developer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat
-                                    laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla
-                                    esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-                            </div>
-                        </div> <!-- end timeline__block -->
-
-                    </div> <!-- end timeline -->
-                </div> <!-- end left -->
-
-                <div class="col-six tab-full right">
-                    <div class="timeline">
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2012 - June 2014</p>
-                                <h3>Great Design Studio</h3>
-                                <h5>Web Designer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat
-                                    laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla
-                                    esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-                            </div>
-                        </div> <!-- end timeline__block -->
-
-                        <div class="timeline__block">
-                            <div class="timeline__bullet"></div>
-                            <div class="timeline__header">
-                                <p class="timeline__timeframe">July 2011 - June 2012</p>
-                                <h3>Epic Design Agency</h3>
-                                <h5>Web Designer</h5>
-                            </div>
-                            <div class="timeline__desc">
-                                <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat
-                                    laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla
-                                    esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-                            </div>
-                        </div> <!-- end timeline__block -->
-
-                    </div> <!-- end timeline -->
-                </div> <!-- end right -->
-
-            </div> <!-- end about-content timeline -->
-
         </section> <!-- end about -->
 
-
-        <!-- works
-    ================================================== -->
-        <section id="works" class="s-works target-section">
-
-            <div class="row narrow section-intro has-bottom-sep">
-                <div class="col-full">
-                    <h3>Portfolio</h3>
-                    <h1>See My Latest Projects.</h1>
-
-                    <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure
-                        esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum
-                        non est in officia.</p>
-                </div>
-            </div>
-
-            <div class="row masonry-wrap">
-                <div class="masonry">
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-beetle.jpg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
-                                    <img src="images/portfolio/beetle.jpg" srcset="images/portfolio/beetle.jpg 1x, images/portfolio/beetle@2x.jpg 2x" alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    The Beetle
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Development
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-lighthouse.jpg" class="thumb-link" title="Lighthouse" data-size="1050x700">
-                                    <img src="images/portfolio/lighthouse.jpg" srcset="images/portfolio/lighthouse.jpg 1x, images/portfolio/lighthouse@2x.jpg 2x"
-                                        alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Lighthouse
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Design
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <div class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </div>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-salad.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/salad.jpg" srcset="images/portfolio/salad.jpg 1x, images/portfolio/salad@2x.jpg 2x" alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Salad
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/woodcraft.jpg" srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x"
-                                        alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Woodcraft
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/skaterboy.jpg" srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x"
-                                        alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Skaterboy
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Development
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-liberty.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/liberty.jpg" srcset="images/portfolio/liberty.jpg 1x, images/portfolio/liberty@2x.jpg 2x" alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Liberty
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/minimalismo.jpg" srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x"
-                                        alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Minimalismo
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Web Design
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                    <div class="masonry__brick">
-                        <div class="item-folio">
-
-                            <div class="item-folio__thumb">
-                                <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" data-size="1050x700">
-                                    <img src="images/portfolio/shutterbug.jpg" srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x"
-                                        alt="">
-                                    <span class="shadow-overlay"></span>
-                                </a>
-                            </div>
-
-                            <div class="item-folio__text">
-                                <h3 class="item-folio__title">
-                                    Lady Shutterbug
-                                </h3>
-                                <p class="item-folio__cat">
-                                    Branding
-                                </p>
-                            </div>
-
-                            <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                                <i class="im im-link"></i>
-                            </a>
-
-                            <span class="item-folio__caption">
-                                <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde
-                                    dolorem corrupti neque nisi.</p>
-                            </span>
-
-                        </div> <!-- end item-folio -->
-                    </div> <!-- end masonry__brick -->
-
-                </div>
-            </div> <!-- end masonry -->
-
-        </section> <!-- end works -->
-
-
-
-        <!-- testimonials
-    ================================================== -->
-        <div class="s-testimonials">
-
-            <div class="overlay"></div>
-
-            <div class="row testimonials-header">
-                <div class="col-full">
-                    <h1 class="h02">What People Say.</h1>
-                </div>
-            </div>
-
-            <div class="row testimonials">
-
-                <div class="col-full testimonials__slider">
-
-                    <div class="testimonials__slide">
-                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum. Laudantium
-                            quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium
-                            corpori.
-                        </p>
-                        <div class="testimonials__author h06">
-                            Tim Cook
-                            <span>CEO, Apple</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonials__slide">
-                        <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
-                            adipisci. Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam
-                            temporibus quisquam vel.</p>
-                        <div class="testimonials__author h06">
-                            Sundar Pichai
-                            <span>CEO, Google</span>
-                        </div>
-                    </div>
-
-                    <div class="testimonials__slide">
-                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt.
-                            Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi
-                            voluptas eius distinctio.</p>
-                        <div class="testimonials__author h06">
-                            Satya Nadella
-                            <span>CEO, Microsoft</span>
-                        </div>
-                    </div>
-
-                </div> <!-- end testimonials__slider -->
-
-            </div> <!-- end testimonials -->
-
-        </div> <!-- end s-testimonials -->
-
-
-        <!-- blog
-    ================================================== -->
         <section id="blog" class="s-blog target-section">
 
             <div class="row narrow section-intro has-bottom-sep">
@@ -695,32 +278,65 @@
 
         </section> <!-- end s-blog -->
 
-
-        <!-- s-cta
+        <!-- testimonials
     ================================================== -->
-        <section class="s-cta">
+        <div class="s-testimonials">
 
-            <div class="row narrow cta">
+            <div class="overlay"></div>
 
-                <div class="col-full cta__content">
+            <div class="row testimonials-header">
+                <div class="col-full">
+                    <h1 class="h02">Parties Involved</h1>
+                </div>
+            </div>
 
-                    <h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost.</a></h2>
+            <div class="row testimonials">
 
-                    <p class="lead">
-                        Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
-                        Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
-                    </p>
+                <div class="col-full testimonials__slider">
 
-                    <div class="cta__action">
-                        <a class="btn btn--primary btn--large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign
-                            Up Now</a>
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum. Laudantium
+                            quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui praesentium
+                            corpori.
+                        </p>
+                        <div class="testimonials__author h06">
+                            Tim Cook
+                            <span>CEO, Apple</span>
+                        </div>
                     </div>
 
-                </div>
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi
+                            adipisci. Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam
+                            temporibus quisquam vel.</p>
+                        <div class="testimonials__author h06">
+                            Sundar Pichai
+                            <span>CEO, Google</span>
+                        </div>
+                    </div>
 
-            </div> <!-- end cta -->
+                    <div class="testimonials__slide">
+                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt.
+                            Ducimus aut sed ipsam. Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi
+                            voluptas eius distinctio.</p>
+                        <div class="testimonials__author h06">
+                            Satya Nadella
+                            <span>CEO, Microsoft</span>
+                        </div>
+                    </div>
 
-        </section>
+                </div> <!-- end testimonials__slider -->
+
+            </div> <!-- end testimonials -->
+
+        </div> <!-- end s-testimonials -->
+
+
+        <!-- blog
+    ================================================== -->
 
 
         <!-- s-stats
@@ -770,7 +386,6 @@
                 <div class="col-full">
                     <h3>Contact</h3>
                     <h1>Say Hello.</h1>
-
                     <p class="lead">Lorem ipsum Dolor adipisicing nostrud et aute Excepteur amet commodo ea dolore irure
                         esse Duis nulla sint fugiat cillum ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum
                         non est in officia.</p>
@@ -886,10 +501,22 @@
 
         <!-- Java Script
     ================================================== -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <script>
+            $('#datepicker').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
     </body>
 
 </html>
