@@ -136,7 +136,7 @@
 
             <div class="row about-content">
                 <div class="col-six tab-full left">
-                        <h3>Shipment</h3>
+                    <h3>Shipment</h3>
                     <form name="contactForm" id="contactForm" method="post" action="">
                         <fieldset>
                             <div class="form-field">
@@ -144,17 +144,27 @@
                                     class="full-width">
                             </div>
                             <div class="form-field">
-                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Loaction" value="" required="" aria-required="true"
+                                <input name="location" type="email" id="contactEmail" placeholder="Location" value="" required="" aria-required="true"
                                     class="full-width">
                             </div>
                             <div class="form-field">
                                 <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
                             </div>
                             <div class="form-field">
-                                <select class="" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required>
+                                <select class="" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required="">
                                     <option>NOR Tendered</option>
                                     <option>Vessel Sailed</option>
                                 </select>
+                            </div>
+                            <div class="form-field">
+                                <input data-date-format="dd/mm/yyyy" name="date" id="datepicker" placeholder="Date" required="">
+                            </div>
+                            <div class="form-field">
+                                <input name="time" type="time" id="contactEmail" placeholder="Time" value="" required="" aria-required="true"
+                                    class="full-width">
+                            </div>
+                            <div class="form-field">
+                                <input name="volume" type="number" id="contactSubject" placeholder="Volume" value="" class="full-width">
                             </div>
 
                             <div class="form-field">
@@ -185,17 +195,15 @@
                                     class="full-width">
                             </div>
                             <div class="form-field">
-                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Loaction" value="" required="" aria-required="true"
+                                <input name="contactName" type="text" id="contactName" placeholder="Receiver ID" value="" minlength="2" required="" aria-required="true"
                                     class="full-width">
                             </div>
+                          
                             <div class="form-field">
                                 <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
                             </div>
                             <div class="form-field">
-                                <select class="" name="description" id="exampleFormControlSelect1" aria-placeholder="Description" required>
-                                    <option>NOR Tendered</option>
-                                    <option>Vessel Sailed</option>
-                                </select>
+                               
                             </div>
 
                             <div class="form-field">
