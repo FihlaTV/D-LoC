@@ -1,10 +1,7 @@
 # D-LoC
-One stop solution to cease fraud and black marketing of the donated organs using hyperledger fabric
-* Organ waiting list made transparent to cease jumping and manipulations.
-* Organ availability list made transparent and updated by the hospitals.
-* Total privacy for the donor.
-* Tracking the organ is possible.
-* No black marketing of the organs to the rich.
+Hyperledger Fabric Blockchain solution generates decentralized letters of credit for fast transactions, records all events that happen on a port to cross-check and calculate demurrage claims digitally between parties involved.
+Digital demurrage claims calculations make transactions faster by enforcing trust via self-executing contracts that lie on the blockchain, thereby reducing the time in dispute resolution and immensely lowers the time taken between transaction.
+
 
 
 # Steps To setup or Integrate Hyperledger Fabric
