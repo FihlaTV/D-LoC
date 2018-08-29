@@ -53,7 +53,7 @@ yo hyperledger-composer:businessnetwork
 
 
 
-# Steps to run D.O.T
+# Steps to run D-LoC
 ## 1. Run shell scripts from fabric tools
 ### 1. Run Fabric netwok
 ```
